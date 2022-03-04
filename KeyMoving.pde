@@ -49,7 +49,7 @@ class Character{
  }
  
  void moveUp(){
-   if (ypos == 0){
+   if (ypos == 25){
      background(#EAF211);
    }
    else{
@@ -60,7 +60,7 @@ class Character{
  }
    
   void moveDown(){
-   if (ypos == width){
+   if (ypos == 580){
      background(#6C4118);
    }
    else{
@@ -71,7 +71,7 @@ class Character{
   }
    
   void moveRight(){
-   if (xpos == width){
+   if (xpos == 655){
      background(#E0308E);
    }
    else{
@@ -82,7 +82,7 @@ class Character{
   }
 
   void moveLeft(){
-   if (xpos == 0){
+   if (xpos == 25){
      background(#A530E0);
      
    }
