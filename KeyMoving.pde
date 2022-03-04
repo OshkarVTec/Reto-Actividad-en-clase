@@ -5,7 +5,7 @@ void setup(){
    background(200);
    size(680, 680);
    strokeWeight(4);
-   myCharacter = new Character(340,340,5);
+   myCharacter = new Character(color(200),340,340,5);
  }
  
 void draw(){
@@ -26,10 +26,12 @@ void draw(){
  
  
 class Character{
+  color c;
   float xpos;
   float ypos;
   float speed;
-  Character(float tempXpos, float tempYpos, float tempSpeed){
+  Character(color tempC, float tempXpos, float tempYpos, float tempSpeed){
+   c = tempC;
    xpos = tempXpos;
    ypos = tempYpos;
    speed = tempSpeed;
@@ -50,46 +52,46 @@ class Character{
  
  void moveUp(){
    if (ypos == 25){
-     background(#EAF211);
+     c = #EAF211;
    }
    else{
-     background(200);
      ypos = ypos - speed;
    }
+   background(c);
    myCharacter.display();
  }
    
   void moveDown(){
    if (ypos == 580){
-     background(#6C4118);
+     c= #6C4118;
    }
    else{
-     background(200);
      ypos = ypos + speed;
    }
+   background(c);
    myCharacter.display();
   }
    
   void moveRight(){
    if (xpos == 655){
-     background(#E0308E);
+     c = #E0308E;
    }
    else{
-     background(200);
      xpos = xpos + speed;
    }
+   background(c);
    myCharacter.display();
   }
 
   void moveLeft(){
    if (xpos == 25){
-     background(#A530E0);
+     c = #A530E0;
      
    }
    else{
-     background(200);
      xpos = xpos - speed;
    }
+   background(c);
    myCharacter.display();
  }
 }
